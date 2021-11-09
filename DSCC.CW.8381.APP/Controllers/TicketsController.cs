@@ -15,7 +15,7 @@ namespace DSCC.CW._8381.APP.Controllers
 {
     public class TicketsController : Controller
     {
-        private readonly string baseUrl = "https://localhost:5001/api/";
+        private readonly string baseUrl = "http://dscccw8381api-test.us-east-1.elasticbeanstalk.com/api/";
         private readonly string pathUrl = "Tickets";
         private readonly HttpClient client = new HttpClient();
 

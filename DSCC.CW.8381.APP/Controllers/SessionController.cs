@@ -15,7 +15,7 @@ namespace DSCC.CW._8381.APP.Controllers
 {
     public class SessionsController : Controller
     {
-        private readonly string baseUrl = "https://localhost:5001/api/";
+        private readonly string baseUrl = "http://dscccw8381api-test.us-east-1.elasticbeanstalk.com/api/";
         private readonly string pathUrl = "Sessions";
         private readonly string hallsPathUrl = "Halls";
         private readonly string moviesPathUrl = "Movies";
