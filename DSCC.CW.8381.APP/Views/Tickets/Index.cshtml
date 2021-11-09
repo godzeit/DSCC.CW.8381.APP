@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DSCC.CW._8381.APP.DBO.Ticket>
+
+@{
+    ViewData["Title"] = "Tickets";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session.Movie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session.Hall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session.Hall.Cinema)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Session.Movie.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Session.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Session.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Session.Hall.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Session.Hall.Cinema.Name)
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

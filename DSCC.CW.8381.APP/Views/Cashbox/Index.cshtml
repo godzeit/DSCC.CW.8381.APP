@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DSCC.CW._8381.APP.DBO.Session>
+
+@{
+    ViewData["Title"] = "Cashbox";
+}
+
+<h1>Cashbox (Only for today's sessions)</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SeatsLeft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hall.Cinema)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SeatsLeft)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Movie.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hall.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hall.Cinema.Name)
+                </td>
+                <td>
+                    <a asp-action="Sell" asp-route-id="@item.Id">Sell Ticket</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
