@@ -1,0 +1,23 @@
+{
+  "region": "us-east-1",
+  "configuration": "Debug",
+  "framework": "netcoreapp3.1",
+  "self-contained": false,
+  "application": "DSCCCW8381APP",
+  "environment": "DSCCCW8381APP-test",
+  "enable-xray": false,
+  "enhanced-health-type": "basic",
+  "additional-options": "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-0068bfb0567188241\";\"aws:ec2:vpc,Subnets\"=\"subnet-0c39b7a402f882de2\"",
+  "solution-stack": "64bit Windows Server 2019 v2.7.2 running IIS 10.0",
+  "environment-type": "SingleInstance",
+  "cname": "dscccw8381app-test2",
+  "instance-type": "t2.micro",
+  "key-pair": "DSCC.CW.8381",
+  "instance-profile": "aws-elasticbeanstalk-ec2-role",
+  "service-role": "aws-elasticbeanstalk-service-role",
+  "proxy-server": "none",
+  "profile": "DSCC.CW.8381.JARVIS",
+  "health-check-url": "/",
+  "iis-website": "Default Web Site",
+  "app-path": "/"
+}
